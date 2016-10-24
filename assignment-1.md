@@ -1,6 +1,13 @@
+<!--
+- This Markdown file might look bad for you.
+- Its purpose is to be converted to a .pdf with Atom markdown-pdf package.
+-
+- Suggested markdown-pdf settings:
+-   Border Size: 20mm
+-->
+
 <div align="center">
 
-    <br><br>
     <br><br>
     <br><br>
 
@@ -9,14 +16,13 @@
     <br><br>
     <br><br>
 
-    <h2>Bioinformatics 1</h2>
-    <h4>Assignment 1</h4>
+    <h1>Bioinformatics 1</h1>
+    <h3>Assignment 1</h3>
 
     <br><br>
     <br><br>
-    <br><br>
 
-    <sup>Henrique Ferrolho</sup>
+    <sup>Henrique Ferrolho - s1683857</sup>
     <br>
     <sup><a href="mailto:henrique.ferrolho@gmail.com">
     henrique.ferrolho@gmail.com
@@ -24,25 +30,30 @@
 
     <br><br>
 
-    <sup><h6>October 24th, 2016</h6></sup>
+    <sup><h6>October 24, 2016</h6></sup>
 
     <br><br>
 </div>
 
-## Question 1
+
+### Question 1
+---
+
+
+### Question 2
+---
 
 
 
-## Question 2
+### Question 3
+---
 
 
 
-## Question 3
+### Question 4
+---
 
 
 
-## Question 4
-
-
-
-## Question 5
+### Question 5
+---
