@@ -1,0 +1,40 @@
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{appendix}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{import}
+\usepackage{menukeys}
+\usepackage{seqsplit}
+\usepackage{tabu}
+
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\begin{document}
+
+\import{includes/}{cover.tex}
+
+\tableofcontents
+\newpage
+
+\import{includes/}{question1.tex}
+
+\import{includes/}{question2.tex}
+
+\import{includes/}{question3.tex}
+
+\import{includes/}{question4.tex}
+
+\import{includes/}{question5.tex}
+
+\end{document}
