@@ -1,11 +1,64 @@
 \section{Question}
 
-\textit{Now look at the following database:
-http://www.kazusa.or.jp/codon/
-The codon usage database lists the frequency which each codon is used in a species (different species prefer different codons). Sequences which have too many rarer codons result in slowing down transcription and inhibition of protein expression - in extreme cases, rare codons are thought to introduce transcription errors when the rare tRNA is not available. If you were to try and express your human cDNA sequence in yeast (Saccharomyces cerevisiae), which codons in your sequence might cause problems for expression. Note there is no hard threshold, but generally codons with 1\% usage or less are considered rare.}
+\large{\textbf{Now look at the following database:}}
+
+\large{\textbf{\href{http://www.kazusa.or.jp/codon/}{Kazusa - Codon Usage Database}}}
+
+\large{\textbf{The \textit{Codon Usage Database} lists the frequency which each codon is used in a species (different species prefer different codons). Sequences which have too many rarer codons result in slowing down transcription and inhibition of protein expression - in extreme cases, rare codons are thought to introduce transcription errors when the rare tRNA is not available.}}
+
+\large{\textbf{If you were to try and express your human cDNA sequence in yeast (\textit{Saccharomyces cerevisiae}), which codons in your sequence might cause problems for expression?}}
+
+\textbf{Note there is no hard threshold, but generally codons with 1\% usage or less are considered rare.}
 
 \bigskip
 
-TODO
+According to the \href{http://www.kazusa.or.jp/codon/cgi-bin/showcodon.cgi?species=4932}{\textit{Saccharomyces cerevisiae} DB page}, yeast have \textbf{6534504} codons. Below is a table with the frequency of each codon in the format \textit{[triplet] [frequency: \textbf{per thousand}] ([number])}.
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+\begin{center}
+    \footnotesize
+    \begin{tabu} to \textwidth{ | X[c] | X[c] | X[c] | X[c] | }
+        \hline
+        & & & \\
+        UUU 26.1 (170666) & UCU 23.5 (153557) & UAU 18.8 (122728) & UGU  8.1  (52903) \\
+        UUC 18.4 (120510) & UCC 14.2  (92923) & UAC 14.8  (96596) & UGC  4.8  (31095) \\
+        UUA 26.2 (170884) & UCA 18.7 (122028) & UAA  1.1   (6913) & UGA  0.7   (4447) \\
+        UUG 27.2 (177573) & UCG  8.6  (55951) & UAG  0.5   (3312) & UGG 10.4  (67789) \\
+        & & & \\
+        \hline
+        & & & \\
+        CUU 12.3  (80076) & CCU 13.5  (88263) & CAU 13.6  (89007) & CGU  6.4  (41791) \\
+        CUC  5.4  (35545) & CCC  6.8  (44309) & CAC  7.8  (50785) & CGC  2.6  (16993) \\
+        CUA 13.4  (87619) & CCA 18.3 (119641) & CAA 27.3 (178251) & CGA  3.0  (19562) \\
+        CUG 10.5  (68494) & CCG  5.3  (34597) & CAG 12.1  (79121) & CGG  1.7  (11351) \\
+        & & & \\
+        \hline
+        & & & \\
+        AUU 30.1 (196893) & ACU 20.3 (132522) & AAU 35.7 (233124) & AGU 14.2  (92466) \\
+        AUC 17.2 (112176) & ACC 12.7  (83207) & AAC 24.8 (162199) & AGC  9.8  (63726) \\
+        AUA 17.8 (116254) & ACA 17.8 (116084) & AAA 41.9 (273618) & AGA 21.3 (139081) \\
+        AUG 20.9 (136805) & ACG  8.0  (52045) & AAG 30.8 (201361) & AGG  9.2  (60289) \\
+        & & & \\
+        \hline
+        & & & \\
+        GUU 22.1 (144243) & GCU 21.2 (138358) & GAU 37.6 (245641) & GGU 23.9 (156109) \\
+        GUC 11.8  (76947) & GCC 12.6  (82357) & GAC 20.2 (132048) & GGC  9.8  (63903) \\
+        GUA 11.8  (76927) & GCA 16.2 (105910) & GAA 45.6 (297944) & GGA 10.9  (71216) \\
+        GUG 10.8  (70337) & GCG  6.2  (40358) & GAG 19.2 (125717) & GGG  6.0  (39359) \\
+        & & & \\
+        \hline
+    \end{tabu}
+\end{center}
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+By examining the table, one can see that \textbf{UAA} (1.1\%), \textbf{UAG} (0.5\%), and \textbf{UGA} (0.7\%) are somewhat rare triplets (for yeast). All these three codons correspond to the \textbf{termination} codon - see \href{https://en.wikipedia.org/wiki/Genetic_code#RNA_codon_table}{RNA codon table}.
+
+This is not a problem however, because despite the low percentage of these codons, there are thousands of each available, which by far cover the needs of the protein expression.
+
+Another codon which might be considered \textit{rare} is \textbf{CGG}, but again that should not be a problem because the expression does not demand a number of that triplet greater than its frequency in yeast.
+
+Having said that, suppose the frequency of \textbf{CGG} was much lower - so low that it could introduce transcription errors. One possible work around is to reverse engineer the \textit{mRNA}. \textbf{CGG} codes \textit{Arginine}, which is also coded by \textbf{CGU}, \textbf{CGC}, and \textbf{CGA} - which have a much higher frequency (check table above). One could replace \textbf{CGG} occurences in the \textit{mRNA} with one of those other three \textit{Arginine} encoding codons, and that should solve the transcription errors.
 
 \newpage
