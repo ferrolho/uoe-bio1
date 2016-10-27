@@ -1,6 +1,6 @@
 \section{Question}
 
-\textit{We now turn to sequence comparison and alignment. You are given the following coding sequence fragments. They encode a homologous proteins in different species, sequence 2 is human (1 extra mark if you can give the gene name and the most likely species for the other sequences). The sequences are aligned to the correct reading frame:}
+\large{\textbf{We now turn to sequence comparison and alignment. You are given the following coding sequence fragments. They encode a homologous proteins in different species, sequence 2 is human (1 extra mark if you can give the gene name and the most likely species for the other sequences). The sequences are aligned to the correct reading frame:}}
 
 \medskip
 
@@ -14,20 +14,37 @@
 
 \medskip
 
+% - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 \subsection{Sequences 1 and 2 differ slightly. How does the resulting protein differ? Could this have functional implications?}
 
-TODO
+The resulting protein does not differ, it is the same: \texttt{LKREAETLREREG}. Since the encoded amino acids do not change, the protein has exactly the same functionality.
+
+One might theorise that this amino acid encoding redundancy is a biological safeguard for small mutations not to change the functionality of a protein.
 
 \medskip
 
+% - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-\subsection{Now use the Needleman Wunsch algorithm to compare sequence 1 to sequences 3 and 4. Use the scoring: match +2, mismatch -1, indel -1. Perform at least one of these on paper (or both if you wish). On paper, use the first three codons only.}
+\subsection{Now use the Needleman-Wunsch algorithm to compare sequence 1 to sequences 3 and 4. Use the scoring: match +2, mismatch -1, indel -1. Perform at least one of these on paper (or both if you wish). On paper, use the first three codons only.}
 
-TODO
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.6\linewidth]{res/needleman-wunsch-seq1-seq3.jpg}
+    \caption{Needleman-Wunsch algorithm result on sequence 1 and 3.}
+    \label{fig:needleman-wunsch-seq1-seq3}
+\end{figure}
 
-\medskip
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.6\linewidth]{res/needleman-wunsch-seq1-seq4.jpg}
+    \caption{Needleman-Wunsch algorithm result on sequence 1 and 4.}
+    \label{fig:needleman-wunsch-seq1-seq4}
+\end{figure}
 
+\clearpage
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 \subsection{Comparing the bare sequences, what can you conclude about the relatedness of the species?}
 
@@ -35,6 +52,7 @@ TODO
 
 \medskip
 
+% - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 \subsection{Extra mark}
 
