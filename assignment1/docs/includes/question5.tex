@@ -1,6 +1,6 @@
 \section{Question}
 
-\large{\textbf{We now turn to sequence comparison and alignment. You are given the following coding sequence fragments. They encode a homologous proteins in different species, sequence 2 is human (1 extra mark if you can give the gene name and the most likely species for the other sequences). The sequences are aligned to the correct reading frame:}}
+\large{\textbf{We now turn to sequence comparison and alignment. You are given the following coding sequence fragments. They encode a homologous proteins in different species, sequence 2 is human. The sequences are aligned to the correct reading frame:}}
 
 \medskip
 
@@ -48,25 +48,38 @@ One might theorise that this amino acid encoding redundancy is a biological safe
 
 \subsection{Comparing the bare sequences, what can you conclude about the relatedness of the species?}
 
-TODO
+By comparing \textit{sequence 1} and \textit{sequence 2} one can see they are very similar. In fact, they encode the same amino acids.
+
+\textit{Sequence 3} and \textit{sequence 4} are also pretty similar. The amino acids they encode are \texttt{EELKREADNLKDR} and \texttt{NEELKREADTLKD}, respectively - they share a common sequence \texttt{EELKREAD}.
+
+Furthermore, with the information from the species (see next answer), we can confirm that \textit{sequences 3} and \textit{4} are closely related (they are both fish).
 
 \medskip
 
 % - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-\subsection{Extra mark}
+\subsection{Extra mark for the gene name and the most likely species for each sequence.}
 
-TODO
+After running a \href{https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome}{Standard Nucleotide BLAST} query for each of the given sequences, we find that it corresponds to the \textbf{KCNB1} gene - \textit{potassium voltage-gated channel, member 1}.
+
+\bigskip
 
 \begin{center}
-	\begin{tabu} to 0.8\textwidth{ | X[c] | X[c] | X[c] | }
+	\begin{tabu} to 0.8\textwidth{ | X[c] | X[c] | }
 		\hline
-		Sequence & Gene name & Species \\
+		& \\
+		Sequence & Species \\
+		& \\
 		\hline
-		1 & ? & ? \\
-		2 & ? & human \\
-		3 & ? & ? \\
-		4 & ? & ? \\
+		& \\
+		1 & \textit{Mus musculus} \\
+		& \\
+		2 & \textit{Homo sapiens} \\
+		& \\
+		3 & \textit{Fundulus heteroclitus} \\
+		& \\
+		4 & \textit{Danio rerio} \\
+		& \\
 		\hline
 	\end{tabu}
 \end{center}
